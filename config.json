@@ -1,0 +1,115 @@
+{
+  "urls": {
+    "main": {
+      "path": "/",
+      "controller": "Ifmo\\Web\\Controllers\\IndexController::showSliderAndAction",
+      "method": "GET"
+    },
+
+    "show goods": {
+      "path": "/category/{category:\\w+}",
+      "controller": "Ifmo\\Web\\Controllers\\GoodsController::indexAction",
+      "method": "GET"
+    },
+
+    "show good": {
+      "path": "/category/{category:\\w+}/{id:\\d+}",
+      "controller": "Ifmo\\Web\\Controllers\\GoodsController::showAction",
+      "method": "GET"
+    },
+    "authorisation": {
+      "path": "/authorisation",
+      "controller": "Ifmo\\Web\\Controllers\\AccountController::indexAction",
+      "method": "GET"
+    },
+    "authorisation in": {
+      "path": "/authorisation",
+      "controller": "Ifmo\\Web\\Controllers\\AccountController::authorisation",
+      "method": "POST"
+    },
+    "registration": {
+      "path": "/registration",
+      "controller": "Ifmo\\Web\\Controllers\\AccountController::registration",
+      "method": "GET"
+    },
+    "add user": {
+      "path": "/registration",
+      "controller": "Ifmo\\Web\\Controllers\\AccountController::addUser",
+      "method": "POST"
+    },
+    "show admin": {
+      "path": "/admin/account",
+      "controller": "Ifmo\\Web\\Controllers\\AccountController::account",
+      "method": "GET"
+    },
+    "outAccount": {
+      "path": "/outAccount",
+      "controller": "Ifmo\\Web\\Controllers\\AccountController::outUser",
+      "method": "GET"
+    },
+    "show account": {
+      "path": "/account",
+      "controller": "Ifmo\\Web\\Controllers\\AccountController::account",
+      "method": "GET"
+    },
+    "dbUpdate": {
+      "path": "/admin/account",
+      "controller": "Ifmo\\Web\\Controllers\\GoodsController::updateGoods",
+      "method": "POST"
+    },
+    "delete element": {
+      "path": "/account/dbDelData",
+      "controller": "Ifmo\\Web\\Controllers\\GoodsController::deleteData",
+      "method": "POST"
+    },
+    "dbUpdate element": {
+      "path": "/account/dbUpdate",
+      "controller": "Ifmo\\Web\\Controllers\\GoodsController::changeData",
+      "method": "POST"
+    },
+    "characteristics": {
+      "path": "/ajax/{section:\\w+}/{id:\\d+}",
+      "controller": "Ifmo\\Web\\Controllers\\GoodsController::char",
+      "method": "GET"
+    },
+    "buy good": {
+      "path": "/buy/category/{category:\\w+}/{id:\\d+}",
+      "controller": "Ifmo\\Web\\Controllers\\GoodsController::buyGoods",
+      "method": "POST"
+    },
+    "basket": {
+      "path": "/account/basket",
+      "controller": "Ifmo\\Web\\Controllers\\GoodsController::showBasket",
+      "method": "GET"
+    },
+    "order": {
+      "path": "/order",
+      "controller": "Ifmo\\Web\\Controllers\\GoodsController::order",
+      "method": "POST"
+    },
+    "orderCancel": {
+      "path": "/order/cancel",
+      "controller": "Ifmo\\Web\\Controllers\\GoodsController::orderCancel",
+      "method": "GET"
+    },
+    "user orders": {
+      "path": "/account/orders",
+      "controller": "Ifmo\\Web\\Controllers\\OrdersController::showUserOrders",
+      "method": "GET"
+    },
+    "action": {
+      "path": "/action/{id:\\d+}",
+      "controller": "Ifmo\\Web\\Controllers\\ActionController::showAction",
+      "method": "GET"
+    }
+
+  },
+  "db": {
+    "server": "127.0.0.1",
+    "dbname": "tech",
+    "user": "ifmo",
+    "pass": "ifmo",
+    "charset": "utf8"
+  }
+
+}
