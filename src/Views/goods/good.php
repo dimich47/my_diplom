@@ -29,7 +29,7 @@
     <div class="fullDescription">
             <a id="description"  href="/ajax/description/<?php echo $position['idgood']; ?>">Описание</a>
             <a id="specification" href="/ajax/specification/<?php echo $position['idgood']; ?>">Характеристики</a>
-            <a id="shipping" href="/ajax/shipping/<?php echo $position['idgood']; ?>">Наличие и доставка</a>
+<!--            <a id="shipping" href="/ajax/shipping/--><?php //echo $position['idgood']; ?><!--">Наличие и доставка</a>-->
     </div>
 
     <div>

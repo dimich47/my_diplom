@@ -7,7 +7,6 @@
     text-decoration: none;
 }
 header{
-
     color: #fff;
     background-color: #212121;
     align-items: center;
@@ -19,7 +18,6 @@ body{
 
 header a, header p{
     color: #fff;
-
 }
 
 img {
@@ -29,6 +27,7 @@ img {
 .logo img,.basketLogo img{
     display: block;
     width: 50%;
+    border-radius: 5px;
 }
 
 .slider img{
@@ -60,7 +59,6 @@ nav a:hover,.fullDescription a:hover {
     max-width: 1200px;
     min-width: 700px;
     margin: 0 auto;
-
 }
 
 .sign{
@@ -74,50 +72,39 @@ nav a:hover,.fullDescription a:hover {
     margin: 20px;
 }
 
-.action{
+.action,.news{
     background: darkorange;
     margin: 30px 0;
     font-size: 5vh;
     color: white;
     width: 100%;
-
 }
-
 .article, .production{
     max-width: 1200px;
-    margin: 0 auto;
-
+    margin: 0;
+    padding: 0;
 }
+
 .article div{
+    display: flex;
+    flex-direction: column;
     margin: 20px auto;
     padding: 10px;
+    justify-content: center;
 }
 
-/*.article h1{*/
-/*    margin: 20px auto;*/
-/*    text-align: center;*/
-/*    flex-wrap: nowrap;*/
-/*    max-width: 300px;*/
-
-/*}*/
 
 .article p{
 font-size: 20px;
     max-width: 400px;
+    text-align: center;
 
 }
 .article img{
-    max-width: 400px;
-
+    text-align: center;
 }
 
-/*.production{*/
-/*    text-align: center;*/
 
-/*}*/
-/*.production h1, .block{*/
-/*    margin: 1vh 1vh;*/
-/*}*/
 .catalog{
     max-width: 1000px;
     min-width: 700px;
@@ -175,14 +162,6 @@ vertical-align: middle;
 
 }
 
-
-/*.div1, .div2{*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    max-width: 70%;*/
-/*    min-width: 30%;*/
-/*    !*justify-content: space-around;*!*/
-/*}*/
 .headerProduct, .product{
     display: flex;
     flex-wrap: wrap;
@@ -253,7 +232,7 @@ vertical-align: middle;
     max-width: 195px;
     width: 100%;
     height: 40px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 .fullDescription{
     margin-top: 2%;
@@ -301,11 +280,7 @@ p.green{
     font-size: 15px;
     text-rendering: optimizeLegibility;
 }
-/*#tab1 th{*/
-/*    text-align: left;*/
-/*    font-size: 20px;*/
-/*    line-height: 50px;*/
-/*}*/
+
 #tab1 tr{
 
     line-height: 30px;
@@ -350,8 +325,9 @@ footer{
     .flex-1000
     {
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
     }
+
     .region{
         display: none;
     }
@@ -360,20 +336,28 @@ footer{
     }
     .article p {
         max-width: 800px;
+        text-align: center;
     }
-    .production a {
-        max-width: 400px;
 
-    }
     .article div {
         width: 80%;
     }
    .article h1{
-       /*text-align: left;*/
+
        max-width: 800px;
    }
+    .article a{
+       /*max-width: 80%;*/
+        width: 100%;
+        align-content: center;
+        text-align: center;
+        margin: auto;
+    }
     .article img{
-       max-width: 400px;
+        width: 100%;
+        align-content: center;
+        text-align: center;
+        margin: auto;
     }
 
 }
@@ -487,6 +471,8 @@ footer{
 /*Блок отображения вкладок*/
 /*конец*/
 
+
+
 #tableBasket{
     border: 2px solid black;
     text-align: center;
@@ -496,15 +482,19 @@ footer{
 }
 
 #tableBasket input{
-    width: 35px;
+    /*width: 35px;*/
     text-align: center;
 
 }
 
-#tableBasket td,th{
-    width: 25%;
+#tableAdmin td{
+    /*width: 25%;*/
 
-    border: 1px solid gray;
+    /*border: 0px solid gray;*/
+}
+#tableBasket td{
+    /*width: 25%;*/
+    border: 1px solid green;
 }
 #order{
     margin: 20px 50px;
@@ -532,60 +522,38 @@ footer{
 }
 /*конец: личный кабинет - Мои заказы*/
 
-/*Модальное окно входа в ЛК*/
-.modal {
-    /* Не обязательно  block */
-    display: block;
 
 
-    width: 600px;
-    max-width: 100%;
+.authorisation, .reg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
+    /*margin-top: 15%;*/
 
-    height: 400px;
-    max-height: 100%;
-
-    position: fixed;
-
-    z-index: 100;
-
-    left: 50%;
-    top: 50%;
-
-    /* Центруем */
-    transform: translate(-50%, -50%);
-
-
-
-    background: white;
-    box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
-}
-.closed {
-    display: none;
 }
 
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 50;
+.authorisation div,.reg div{
 
-    background: rgba(0, 0, 0, 0.6);
+    /*margin-top: 25%;*/
+    /*margin-left: 35%;*/
+    text-align: center;
+    padding: 10px;
+
 }
+.authorisation input{
+    min-width: 200px;
 
-
-.modal .close-button {
-    position: absolute;
-    z-index: 1;
-    top: 10px;
-    right: 20px;
-
-    border: 0;
-    background: black;
-    color: white;
-    padding: 5px 10px;
-    font-size: 1.3rem;
 }
-
+.authorisation button, .reg button{
+    cursor: pointer;
+    color: #fff;
+    background-color: #ff6700;
+    border-color: #ff6700;
+    font-size: 14px;
+    line-height: 13px;
+    text-align: center;
+    width: 250px;
+    height: 40px;
+}
 

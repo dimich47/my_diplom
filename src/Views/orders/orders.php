@@ -20,8 +20,9 @@
 
                 <td><? echo $all_goods[$j][$i]['goods_idgood']; ?></td>
                 <td><? echo $all_goods[$j][$i]['title']; ?></td>
-                <td><? echo $all_goods[$j][$i]['pricegoods']; ?></td>
                 <td><? echo $all_goods[$j][$i]['quantitygoods']; ?></td>
+                <td><? echo $all_goods[$j][$i]['pricegoods']; ?></td>
+
             </tr>
             <?php endfor; ?>
    <? endfor; ?>

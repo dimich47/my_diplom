@@ -1,6 +1,6 @@
 let description=document.getElementById("description");
 let specification=document.getElementById("specification");
-let shipping=document.getElementById("shipping");
+// let shipping=document.getElementById("shipping");
 let tbody = document.getElementById('tab1').getElementsByTagName('TBODY')[0];
 let list = document.getElementById('list');
 let quantity=document.getElementById('quantity');
@@ -26,7 +26,7 @@ function descriptionLoad() {
 
     description.classList.add('selected');
     specification.classList.remove('selected');
-    shipping.classList.remove('selected');
+    // shipping.classList.remove('selected');
 
     let adr = description.getAttribute('href');
     let request = new XMLHttpRequest();
@@ -63,7 +63,7 @@ function specificationFun(event)
     event.preventDefault();
     specification.classList.add('selected');
     description.classList.remove('selected');
-    shipping.classList.remove('selected');
+    // shipping.classList.remove('selected');
 
     let adr = specification.getAttribute('href');
     let request = new XMLHttpRequest();

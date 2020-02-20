@@ -13,7 +13,7 @@
 <!--            <h3>--><?// echo $article['text']; ?><!--</h3>-->
         <div class="priceAndBuy">
             <p><? echo $position['price']; ?></p>
-            <input type="image" src="/static/img/buyButton.jpg" class="buyButton" name="<?php echo $position['idgood']?>">
+            <input type="image" src="/static/img/basket.jpg" class="buyButton" name="<?php echo $position['idgood']?>">
         </div>
     </div>
    <? endforeach; ?>

@@ -37,7 +37,11 @@
             </div>
 
             <div class="basketLogo flex-1">
-                <a href="/account/basket"> <img src="/static/img/logo.jpg"> </a>
+                <?php if(!$_SESSION['idgoods']):?>
+                    <a href="/account/basket"> <img src="/static/img/basket.jpg"> </a>
+                <?php else: ?>
+                    <a href="/account/basket"> <img src="/static/img/basketFull.jpg"> </a>
+                <?php endif; ?>
             </div>
 
         </div>

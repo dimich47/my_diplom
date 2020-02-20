@@ -40,9 +40,11 @@
         </tbody>
     </table>
     <br>
+    <h2 id="status"></h2>
     <input type="submit" value="Подтвердить заказ" id="order">
     <input type="button" value="Отменить заказ" id="orderCancel">
-<p id="status"></p>
+    <a href="/"><input type="button" value="Вернуться к покупкам"></a>
+
 </form>
 <script src="/static/js/basket.js"></script>
 

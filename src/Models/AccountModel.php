@@ -6,12 +6,12 @@ use Ifmo\Web\Core\DBConnection;
 
 class AccountModel
 {
-    const USER_EXISTS = 'Пользователь с таким логином существует!';
+    const USER_EXISTS = 'Ошибка! Пользователь с таким именем существует!';
     const SUCCESS = "Авторизация администратора прошла успешно";//
     const SUCCESS1 = "Авторизация пользователя прошла успешно";//
     const BASKET = "В корзине есть товары";//
     const  ERROR = "Ошибка авторизации";//
-    const REGISTRATION_FAILD = 'Регистрация прошла с ошибками';//
+    const REGISTRATION_FAILD = 'Ошибка регистрации';//
     const REGISTRATION_SUCCESS = 'РЕГИСТРАЦИЯ ПРОШЛА УСПЕШНО';//
     private  $db;
     public function __construct()

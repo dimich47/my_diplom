@@ -1,9 +1,9 @@
-console.log("Вход выполнен в js");
+
 let form = document.forms.reg;
 
 const SUCCESS = "РЕГИСТРАЦИЯ ПРОШЛА УСПЕШНО";
-const  ERROR = "Регистрация прошла с ошибками";
-const USER_EXISTS = 'Пользователь с таким логином существует!';
+const  ERROR = "Ошибка регистрации";
+const USER_EXISTS = 'Ошибка! Пользователь с таким именем существует!';
 
 let elem = document.getElementById("error");
 

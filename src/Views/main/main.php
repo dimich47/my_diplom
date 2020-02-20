@@ -21,7 +21,7 @@
 
     <section class="article flex flex-1000">
         <?php foreach($all_actions as $action):?>
-        <div class="flex-1">
+        <div class="#">
 <!--            <h1>--><?// echo $action['title']; ?><!--</h1>-->
             <a href="/action/<? echo $action['idaction']; ?>"> <img src="/static/img/<?php echo $action['photo'];?>"> </a>
             <p> <?echo $action['title'];?> </p>
@@ -39,11 +39,14 @@
         <div class="production flex ">
 
                 <a href="/category/smartphones" title="Смартфоны"><img src="/static/img/smartphones.jpg"></a>
+            <div class="flex flex-column">
                 <a href="/category/smart_devices" title="Умные устройства"><img src="/static/img/smartdevices.jpg"></a>
                 <a href="/category/audio" title="Аудио"><img src="/static/img/audio.jpg"></a>
+            </div>
+
         </div>
 
-    <div class="action flex ">
+    <div class="news flex ">
         <p>НОВОСТИ</p>
     </div>
     <div class="flex news">

@@ -4,7 +4,7 @@ const CANCEL = "Заказ отменен";
 let form=document.forms.basket;
 
 
-let table=document.getElementById("table");
+let table=document.getElementById("tableBasket");
 let title=document.getElementById("title");
 let price=document.getElementById("price");
 let status=document.getElementById("status");
@@ -16,11 +16,12 @@ form.addEventListener('submit',buy);
 buttonOrderCancel.addEventListener('click',orderCancel);
 
 console.log(table.rows.length);
-if(!table.rows.length)
+if(Number(table.rows.length)===1)
 {
     console.log("таблица пуста");
     status.innerText="Корзина пуста";
     buttonOrder.classList.add("disabled");
+    buttonOrderCancel.classList.add("disabled");
 }
 else{
     status.innerText="";

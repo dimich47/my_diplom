@@ -66,7 +66,7 @@
             <form name="showDataGoods">
                 <p id="error"></p>
                 <div id="check" >
-                    <table id="#" width="900px">
+                    <table id="tableAdmin" width="900px">
                         <thead>
                             <th> </th>
                             <th>idgood</th>
@@ -134,7 +134,7 @@
         <form name="showDataAction">
             <p id="error2"></p>
             <div id="check2">
-                <table id="#" >
+                <table id="tableAdmin" >
                     <thead>
                     <th > </th>
                     <th width="150px">idaction</th>
@@ -189,7 +189,7 @@
         <fieldset>
             <form name="showDataSlider">
                 <p id="error3"></p>
-                <table id="#" >
+                <table id="tableAdmin" >
                     <thead>
                     <th > </th>
                     <th width="180px">idslider</th>
