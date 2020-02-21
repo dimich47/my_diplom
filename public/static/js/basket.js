@@ -10,7 +10,7 @@ let price=document.getElementById("price");
 let status=document.getElementById("status");
 let buttonOrder=document.getElementById('order');
 let buttonOrderCancel=document.getElementById('orderCancel');
-
+let buttonContinue=document.getElementById('continue');
 
 form.addEventListener('submit',buy);
 buttonOrderCancel.addEventListener('click',orderCancel);
@@ -22,6 +22,7 @@ if(Number(table.rows.length)===1)
     status.innerText="Корзина пуста";
     buttonOrder.classList.add("disabled");
     buttonOrderCancel.classList.add("disabled");
+    buttonContinue.classList.add("disabled");
 }
 else{
     status.innerText="";

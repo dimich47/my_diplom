@@ -102,9 +102,14 @@ class GoodsController extends Controller
         {
             header('Location: /authorisation');
         }
+        $total=0;
+        for($i=0;$i<count($_SESSION['price'],COUNT_RECURSIVE);$i++){
+            $total+=(int)$_SESSION['price'][$i];
+        }
         $content = 'orders/basket.php';
         $data = [
-            'page_title' => 'Корзина'
+            'page_title' => 'Корзина',
+            'total'=> $total
         ];
         return $this->generateResponse($content, $data);
     }

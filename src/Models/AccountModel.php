@@ -35,6 +35,16 @@ class AccountModel
 
         return self::SUCCESS1;
     }
+    public function getIdUser($login){
+        $sql = 'SELECT iduser FROM users WHERE login= :login';
+
+        return $this->db->execute($sql, ['login'=>$login],false);
+    }
+    public function getNameUser($idlogin){
+        $sql = 'SELECT name FROM user_info WHERE users_iduser= :idlogin';
+
+        return $this->db->execute($sql, ['idlogin'=>$idlogin],false);
+    }
     public function addUser(array $user_data){
 
         // проверка уникальности логина
@@ -42,32 +52,33 @@ class AccountModel
         // добавление в таблицу user
         // добавление контактной информации
         //  в таблицу user_info
-
+        $name = $user_data['name'];
+        $phone= $user_data['phone'];
         $login = $user_data['login'];
         if ($this->isUser($login)) return self::USER_EXISTS;
         $pwd = $user_data['password'];
         $pwd = password_hash($pwd,PASSWORD_DEFAULT);
 
         $user_sql = "INSERT INTO users (login, pwd) VALUES (:login, :pwd)";
-        //$user_info_sql = "INSERT INTO user_info(address, phone, user_iduser) VALUES (:address, :phone, :user_id)";
+        $user_info_sql = "INSERT INTO user_info(name, phone) VALUES (:name, :phone)";
 
         try{
             // начало транзакции
             $this->db->getConnection()->beginTransaction(); //2801
-
             $user_params = [
                 'login' => $login,
                 'pwd'=>$pwd
             ];
-
-
             $this->db->executeSql($user_sql, $user_params); //2801
-//            $info_params = [
-//                'address'=>$user_data['address'],
-//                'phone'=>$user_data['phone'],
+
+            $info_params = [
+                'name'=>$name,
+                'phone'=>$phone
 //                'user_id'=>$this->db->getConnection()->lastInsertId() //2801
-//            ];
-//            $this->db->executeSql($user_info_sql, $info_params);//
+            ];
+            $this->db->executeSql($user_info_sql, $info_params);//
+
+
             // подтверждение транзакции
             $this->db->getConnection()->commit();//
             return self::REGISTRATION_SUCCESS;//

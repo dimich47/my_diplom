@@ -63,18 +63,25 @@ class AccountController extends Controller
             $allGoods = $this->goods_model->getAll();
             $allActions = $this->goods_model->getAllActions();
             $allSliders = $this->goods_model->getAllSliders();
+//            $idlogin=$this->account_model->getIdUser($_SESSION['login']);
+//            $name = $this->account_model->getNameUser($idlogin);
             $content = 'admin/accountAdmin.php';
             $data = [
                 'page_title'=>'Личный кабинет администратора',
                 'all_goods'=>$allGoods,
                 'all_actions'=>$allActions,
                 'all_sliders'=>$allSliders,
+//                'nameUser'=>$name
             ];
             return $this->generateResponse($content, $data);
         }
         $content = 'account/account.php';
+        $idlogin=$this->account_model->getIdUser($_SESSION['login']);
+        $name = $this->account_model->getNameUser($idlogin['iduser']);
+
         $data = [
             'page_title'=>'Личный кабинет пользователя',
+            'nameUser'=> $name['name']
         ];
         return $this->generateResponse($content, $data);
     }

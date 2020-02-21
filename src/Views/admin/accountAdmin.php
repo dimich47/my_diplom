@@ -24,10 +24,10 @@
                     </select>
                     <br>
                     <label for="title">Введите наименование товара</label>
-                    <input id="title" name="title" type="text" placeholder="Наименование товара" maxlength="30">
+                    <input id="title" name="title" type="text" placeholder="Наименование товара" maxlength="80" required size="50px">
                     <br>
                     <label for="price">Введите цену товара</label>
-                    <input id="price" name="price" type="number" min="10" max="500000"  value="0">
+                    <input id="price" name="price" type="number" min="10" max="500000" >
                     <br>
                     <label for="quantity">Введите количество товара</label>
                     <input id="quantity" name="quantity" type="number"  min="1" max="10000" value="1">
@@ -36,16 +36,18 @@
 
                 <fieldset>
                     <legend>Описание товара</legend>
-                    <textarea  name="text" cols="100"  rows="10"></textarea>
+                    <textarea  name="text" cols="150"  rows="10" required></textarea>
+                    <br>
                     <br>
                     <label for="photo">Загрузите изображение для товара</label>
                     <br>
+
                     <input type="file" id="photo" name="photo" accept="image/*">
                 </fieldset>
 
                 <fieldset>
                     <legend>Характеристики товара</legend>
-                    <textarea  name="text2" cols="100"  rows="10"></textarea>
+                    <textarea  name="text2" cols="150"  rows="10" required></textarea>
                     <br>
                 </fieldset>
 
@@ -81,7 +83,7 @@
                         <div>
                             <input  type="checkbox" name="check[]" value="<? echo $goods['idgood']; ?>" >
                             <input disabled type="text"  name="idgood" value="<? echo $goods['idgood']; ?>" >
-                            <input disabled type="text"  name="title" value="<? echo $goods['title']; ?>" >
+                            <input disabled type="text"  size="55" name="title" value="<? echo $goods['title']; ?>" >
                             <input disabled type="text"  name="category" value="<?php echo $goods['category']; ?>">
                             <input disabled type="text"  name="price" value="<?php echo $goods['price']; ?>">
                             <input disabled type="text"  name="quantity" value="<?php echo $goods['quantity']; ?>">
@@ -110,15 +112,16 @@
                         <option value="audio">Аудио</option>
                     </select>
                     <label for="idGoodsForAction">Введите id товара #1</label>
-                    <input id="idGoodsForAction" name="idGoodsForAction" type="text" placeholder="id" maxlength="6">
+                    <input id="idGoodsForAction" name="idGoodsForAction" type="text" placeholder="id" maxlength="6" required>
                     <br>
                 <label for="actiontitle">Введите наименование акции</label>
-                <input id="actiontitle" name="actionTitle" type="text" placeholder="Наименование акции" maxlength="50">
+                <input id="actiontitle" name="actionTitle" type="text" placeholder="Наименование акции" maxlength="50" required size="50">
                 <br>
                 </fieldset>
                 <fieldset>
                     <legend>Описание акции</legend>
-                    <textarea  name="actionText" cols="100"  rows="10"></textarea>
+                    <textarea  name="actionText" cols="150"  rows="10" required></textarea>
+                    <br>
                     <br>
                     <label for="actionPhoto">Загрузите изображение акции</label>
                     <br>
@@ -147,8 +150,8 @@
                     <div>
                         <input  type="checkbox" name="checkAction[]" value="<? echo $action['idaction']; ?>" >
                         <input disabled type="text"  name="idaction" value="<? echo $action['idaction']; ?>" >
-                        <input disabled type="text"  name="title" value="<? echo $action['title']; ?>" >
-                        <input disabled type="text"  name="text" value="<? echo $action['text']; ?>" >
+                        <input disabled type="text"  name="title" size="25" value="<? echo $action['title']; ?>" >
+                        <input disabled type="text"  name="text" size="105" value="<? echo $action['text']; ?>" >
                     </div>
                 <? endforeach; ?>
             </div>
@@ -174,7 +177,8 @@
                     <option value="audio">Аудио</option>
                 </select>
                     <label for="idGoodsForSlider">Введите id товара #1</label>
-                    <input id="idGoodsForSlider" name="idGoodsForSlider" type="text" placeholder="id" maxlength="6">
+                    <input id="idGoodsForSlider" name="idGoodsForSlider" type="text" placeholder="id" maxlength="6" required>
+                    <br>
                     <br>
                     <label for="photoSlider">Загрузите изображение товара</label>
                     <br>

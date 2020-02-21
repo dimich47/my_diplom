@@ -40,11 +40,14 @@
         </tbody>
     </table>
     <br>
-    <h2 id="status"></h2>
+    <h3 id="total">Итого: <?php echo $data['total'] ?></h3>
+
+
     <input type="submit" value="Подтвердить заказ" id="order">
     <input type="button" value="Отменить заказ" id="orderCancel">
-    <a href="/"><input type="button" value="Вернуться к покупкам"></a>
-
+    <br>
+    <a href="/"><input type="button" value="Вернуться к покупкам" id="continue"></a>
+    <h2 id="status"></h2>
 </form>
 <script src="/static/js/basket.js"></script>
 

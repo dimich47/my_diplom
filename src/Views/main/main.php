@@ -30,12 +30,16 @@
         <? endforeach; ?>
     </section>
 
+    <div class="news flex ">
+        <p>НОВОСТИ</p>
+    </div>
+    <div class="flex news">
+        <img src="/static/img/news.jpg"> </a>
+    </div>
 
     <div class="action flex ">
         <p>ПРОДУКЦИЯ</p>
     </div>
-
-
         <div class="production flex ">
 
                 <a href="/category/smartphones" title="Смартфоны"><img src="/static/img/smartphones.jpg"></a>
@@ -46,12 +50,7 @@
 
         </div>
 
-    <div class="news flex ">
-        <p>НОВОСТИ</p>
-    </div>
-    <div class="flex news">
-        <img src="/static/img/news.jpg"> </a>
-    </div>
+
 
 
 

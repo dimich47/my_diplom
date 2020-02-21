@@ -27,7 +27,9 @@
             <?php endfor; ?>
    <? endfor; ?>
 <? endif; ?>
+
         </tbody>
     </table>
+
 </div>
 </form>
